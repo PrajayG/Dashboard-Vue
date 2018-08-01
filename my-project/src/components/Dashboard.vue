@@ -55,11 +55,9 @@ export default {
     }
   }, 
   created: function () {
-    console.log('whga')
-    console.log(this.$store.state.creatives)
-    if (this.$store.state.creatives === '') {
+    if (this.$store.state['creatives'].length === undefined) {
       console.log('hello')
-      loadData()
+      this.loadData()
     }
   },
 
